@@ -35,18 +35,10 @@
       gap: 10px;
       text-decoration: none;
     }
-    .logo-img-placeholder {
+    .nav-logo-img {
       width: 34px; height: 34px;
-      border: 2px dashed #c0d4f0;
       border-radius: 8px;
-      background: #f0f6ff;
-      display: grid; place-items: center;
-      font-size: 10px;
-      color: #90afd4;
-      font-weight: 600;
-      letter-spacing: -.01em;
-      text-align: center;
-      line-height: 1.2;
+      object-fit: cover;
       flex-shrink: 0;
     }
     .nav-logo-text {
@@ -262,17 +254,10 @@
       gap: 10px;
       text-decoration: none;
     }
-    .footer-logo-placeholder {
+    .footer-logo-img {
       width: 28px; height: 28px;
-      border: 2px dashed #c0d4f0;
       border-radius: 7px;
-      background: #f0f6ff;
-      display: grid; place-items: center;
-      font-size: 8px;
-      color: #90afd4;
-      font-weight: 600;
-      text-align: center;
-      line-height: 1.2;
+      object-fit: cover;
     }
     .footer-logo span {
       font-size: .95rem;
@@ -295,7 +280,7 @@
   <!-- Nav -->
   <nav>
     <a class="nav-logo" href="#">
-      <div class="logo-img-placeholder">LOGO</div>
+      <img src="../app-icon.png" alt="SeaLens Logo" class="nav-logo-img">
       <span class="nav-logo-text">SeaLens</span>
     </a>
   </nav>
@@ -509,7 +494,7 @@
   <!-- Footer -->
   <footer>
     <a class="footer-logo" href="#">
-      <div class="footer-logo-placeholder">LOGO</div>
+      <img src="../app-icon.png" alt="SeaLens Logo" class="footer-logo-img">
       <span>SeaLens</span>
     </a>
     <p class="footer-meta">Effective date: April 17, 2026 &nbsp;·&nbsp; No account required &nbsp;·&nbsp; Global</p>
