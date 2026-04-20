@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SeaLens — Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #f5f5f5;
+      color: #111;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #e8e8e8;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 40px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-img-placeholder {
+      width: 34px; height: 34px;
+      border: 2px dashed #c0d4f0;
+      border-radius: 8px;
+      background: #f0f6ff;
+      display: grid; place-items: center;
+      font-size: 10px;
+      color: #90afd4;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      text-align: center;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+    .nav-logo-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -.01em;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: #fff;
+      text-align: center;
+      padding: 72px 24px 56px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0f7ff;
+      border: 1px solid #c8e0ff;
+      color: #1a73e8;
+      font-size: .78rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      letter-spacing: .01em;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: #1a73e8;
+      border-radius: 50%;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      line-height: 1.1;
+      color: #111;
+      margin-bottom: 16px;
+    }
+    .hero-meta {
+      font-size: .88rem;
+      color: #888;
+      font-style: italic;
+    }
+
+    /* ── LAYOUT ── */
+    .layout {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 56px 24px 100px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* ── SIDEBAR TOC ── */
+    .toc {
+      position: sticky;
+      top: 84px;
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 16px;
+      padding: 24px 20px;
+    }
+    .toc-label {
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+    }
+    .toc ol li {
+      counter-increment: toc;
+      margin-bottom: 2px;
+    }
+    .toc ol li a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: .82rem;
+      color: #555;
+      font-weight: 500;
+      transition: background .15s, color .15s;
+    }
+    .toc ol li a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: .68rem;
+      font-weight: 600;
+      color: #bbb;
+      min-width: 18px;
+    }
+    .toc ol li a:hover { background: #f0f7ff; color: #1a73e8; }
+    .toc ol li a:hover::before { color: #1a73e8; }
+
+    /* ── SECTIONS ── */
+    .sections { display: flex; flex-direction: column; gap: 20px; }
+
+    .section {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 20px;
+      padding: 36px 40px;
+      transition: box-shadow .2s;
+    }
+    .section:hover { box-shadow: 0 4px 24px rgba(0,0,0,.06); }
+
+    .section-num {
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #1a73e8;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      color: #111;
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
+
+    .section p {
+      font-size: .93rem;
+      color: #444;
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* callout / blockquote */
+    .callout {
+      background: #f8faff;
+      border-left: 3px solid #1a73e8;
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: .9rem;
+      color: #444;
+      line-height: 1.65;
+    }
+
+    /* sub-headings inside sections */
+    .section h3 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: #111;
+      margin: 22px 0 8px;
+    }
+    .section h3:first-of-type { margin-top: 0; }
+
+    /* lists */
+    .section ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .section ul:last-child { margin-bottom: 0; }
+    .section ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .9rem;
+      color: #444;
+      line-height: 1.6;
+    }
+    .section ul li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #1a73e8;
+      flex-shrink: 0;
+      margin-top: 8px;
+      opacity: .5;
+    }
+
+    a { color: #1a73e8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #fff;
+      border-top: 1px solid #e8e8e8;
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .footer-logo-placeholder {
+      width: 28px; height: 28px;
+      border: 2px dashed #c0d4f0;
+      border-radius: 7px;
+      background: #f0f6ff;
+      display: grid; place-items: center;
+      font-size: 8px;
+      color: #90afd4;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .footer-logo span {
+      font-size: .95rem;
+      font-weight: 700;
+      color: #111;
+    }
+    .footer-meta { font-size: .8rem; color: #999; }
+
+    @media (max-width: 768px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; }
+      nav { padding: 0 20px; }
+      .section { padding: 24px 22px; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a class="nav-logo" href="#">
+      <div class="logo-img-placeholder">LOGO</div>
+      <span class="nav-logo-text">SeaLens</span>
+    </a>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-badge">Legal Document</div>
+    <h1>Privacy Policy</h1>
+    <p class="hero-meta">Effective date: April 17, 2026 &nbsp;·&nbsp; No account required &nbsp;·&nbsp; Global</p>
+  </div>
+
+  <!-- Main layout -->
+  <div class="layout">
+
+    <!-- Sidebar TOC -->
+    <aside class="toc">
+      <p class="toc-label">Contents</p>
+      <ol>
+        <li><a href="#s1">Overview</a></li>
+        <li><a href="#s2">Who This Covers</a></li>
+        <li><a href="#s3">What We Collect</a></li>
+        <li><a href="#s4">How We Use Your Data</a></li>
+        <li><a href="#s5">Legal Basis</a></li>
+        <li><a href="#s6">Who We Share With</a></li>
+        <li><a href="#s7">Data Retention</a></li>
+        <li><a href="#s8">Security</a></li>
+        <li><a href="#s9">Your Rights</a></li>
+        <li><a href="#s10">Children</a></li>
+        <li><a href="#s11">International Transfers</a></li>
+        <li><a href="#s12">Third-Party Policies</a></li>
+        <li><a href="#s13">Changes to This Policy</a></li>
+        <li><a href="#s14">Contact</a></li>
+      </ol>
+    </aside>
+
+    <!-- Content -->
+    <div class="sections">
+
+      <div class="section" id="s1">
+        <span class="section-num">01 — Overview</span>
+        <h2>About This Policy</h2>
+        <p>SeaLens collects only the data it needs to work, improve, and stay reliable. This policy tells you exactly what we collect, why, and what your rights are.</p>
+        <div class="callout">
+          Short version: we don't sell your data. We don't use it for ads. Your videos and research outputs are never shared with third parties except as needed to run the app's technical services.
+        </div>
+      </div>
+
+      <div class="section" id="s2">
+        <span class="section-num">02 — Who This Covers</span>
+        <h2>Who This Covers</h2>
+        <p>Everyone who uses SeaLens — researchers, scientists, NGOs, government staff, students, and independent users worldwide.</p>
+      </div>
+
+      <div class="section" id="s3">
+        <span class="section-num">03 — What We Collect</span>
+        <h2>What We Collect</h2>
+
+        <h3>Your uploaded content</h3>
+        <ul>
+          <li>Underwater videos you upload</li>
+          <li>Frames extracted from those videos during ML processing</li>
+          <li>File metadata: name, size, format, duration, timestamp</li>
+        </ul>
+
+        <h3>AI processing data</h3>
+        <ul>
+          <li>Fish detections: family/species predictions, confidence scores, bounding boxes</li>
+          <li>Re-identification data used to track individual fish across frames</li>
+          <li>Final analysis results and generated outputs</li>
+        </ul>
+
+        <h3>Your corrections and annotations</h3>
+        <ul>
+          <li>Verification responses (yes / no / not sure)</li>
+          <li>Corrected species or family labels you provide</li>
+          <li>Manual notes or annotations you add</li>
+        </ul>
+
+        <h3>Analytics (via Mixpanel)</h3>
+        <p>Mixpanel's Swift SDK automatically collects the following on every event:</p>
+        <ul>
+          <li>Operating system name and version</li>
+          <li>App version and build number</li>
+          <li>Device model</li>
+          <li>Screen resolution</li>
+          <li>Wi-Fi status</li>
+          <li>A randomly generated device ID (local to your installation, not tied to your identity)</li>
+          <li>SDK library version</li>
+          <li>Event duration (time between timed actions)</li>
+          <li>Estimated location (city, region, country) — derived from your IP by Mixpanel at ingestion; the IP is then discarded and not stored</li>
+        </ul>
+        <p>We also log custom events for in-app actions like upload, ML processing, verification, and export — to understand feature usage. We never send your videos, AI results, or corrections to Mixpanel.</p>
+
+        <h3>Crash and diagnostic data (via Firebase Crashlytics)</h3>
+        <ul>
+          <li>Crash logs, stack traces, error reports</li>
+          <li>App version, device model, and OS version at crash time</li>
+          <li>Memory/storage state and anonymous session identifiers</li>
+        </ul>
+
+        <h3>IP address</h3>
+        <p>Your IP address is used transiently for video uploads and ML inference. It's not stored long-term by SeaLens. Mixpanel uses it momentarily to estimate geolocation, then discards it.</p>
+      </div>
+
+      <div class="section" id="s4">
+        <span class="section-num">04 — How We Use Your Data</span>
+        <h2>How We Use Your Data</h2>
+        <ul>
+          <li>Run our ML pipeline and return fish detection results to you</li>
+          <li>Enable reliable video uploads (via TUSKit)</li>
+          <li>Diagnose crashes and fix bugs (via Firebase Crashlytics)</li>
+          <li>Understand how the app is used and improve it (via Mixpanel)</li>
+          <li>Improve ML model accuracy over time using anonymized, aggregated data</li>
+          <li>Meet legal obligations</li>
+        </ul>
+        <p>We don't sell your data. We don't use it for advertising. Your videos and outputs are used solely to serve you.</p>
+      </div>
+
+      <div class="section" id="s5">
+        <span class="section-num">05 — Legal Basis</span>
+        <h2>Legal Basis for Processing</h2>
+        <ul>
+          <li><strong>Contract:</strong> to provide the app's core functionality</li>
+          <li><strong>Legitimate interests:</strong> bug fixing, analytics, and model improvement — balanced against your privacy rights</li>
+          <li><strong>Consent:</strong> where you've explicitly agreed (e.g., optional analytics at onboarding)</li>
+        </ul>
+      </div>
+
+      <div class="section" id="s6">
+        <span class="section-num">06 — Who We Share With</span>
+        <h2>Who We Share Data With</h2>
+        <p>Only these processors, only as needed:</p>
+        <ul>
+          <li><strong>TUSKit</strong> — video upload handling; doesn't retain content after upload</li>
+          <li><strong>Firebase Crashlytics (Google LLC)</strong> — crash logs, device info, app diagnostics; governed by Google's Privacy Policy</li>
+          <li><strong>Mixpanel, Inc.</strong> — usage events and the auto-collected properties listed above; governed by Mixpanel's Privacy Policy</li>
+        </ul>
+        <div class="callout">
+          We don't share your videos, AI outputs, corrections, or annotations with any third party beyond the technical services listed above.
+        </div>
+      </div>
+
+      <div class="section" id="s7">
+        <span class="section-num">07 — Data Retention</span>
+        <h2>How Long We Keep Data</h2>
+        <ul>
+          <li>Uploaded videos and outputs — until you request deletion or stop using the app</li>
+          <li>Mixpanel analytics — up to 5 years (Mixpanel's default; configurable)</li>
+          <li>Crashlytics crash reports — 90 days (Crashlytics' default)</li>
+          <li>IP address / transient network data — not retained beyond the processing session</li>
+        </ul>
+      </div>
+
+      <div class="section" id="s8">
+        <span class="section-num">08 — Security</span>
+        <h2>Security</h2>
+        <p>We use HTTPS/TLS for all data transmission, access controls on stored data, and reputable processors with established security programs. No system is 100% secure — please use SeaLens responsibly.</p>
+      </div>
+
+      <div class="section" id="s9">
+        <span class="section-num">09 — Your Rights</span>
+        <h2>Your Rights</h2>
+        <p>Depending on where you are, you may have the right to:</p>
+        <ul>
+          <li><strong>Access</strong> — get a copy of your data</li>
+          <li><strong>Correct</strong> — fix inaccurate data</li>
+          <li><strong>Delete</strong> — have your data removed, including analytics identifiers and crash logs</li>
+          <li><strong>Restrict</strong> — limit how your data is processed</li>
+          <li><strong>Portability</strong> — receive your data in a machine-readable format</li>
+          <li><strong>Object</strong> — to processing based on legitimate interests</li>
+        </ul>
+        <p>Email <a href="mailto:support@sealens.app">support@sealens.app</a> to exercise any of these rights. We'll respond within 30 days. For data held by Mixpanel or Firebase, we'll help you make the request or point you to their channels.</p>
+      </div>
+
+      <div class="section" id="s10">
+        <span class="section-num">10 — Children</span>
+        <h2>Children</h2>
+        <p>SeaLens is not for children under 13. If we've accidentally collected data from a child under 13, email <a href="mailto:support@sealens.app">support@sealens.app</a> and we'll delete it.</p>
+      </div>
+
+      <div class="section" id="s11">
+        <span class="section-num">11 — International Transfers</span>
+        <h2>International Transfers</h2>
+        <p>Our processors (Google/Firebase, Mixpanel) may store or process data in the United States or other countries. We ensure appropriate safeguards are in place — such as standard contractual clauses — where required by law.</p>
+      </div>
+
+      <div class="section" id="s12">
+        <span class="section-num">12 — Third-Party Privacy Policies</span>
+        <h2>Third-Party Privacy Policies</h2>
+        <ul>
+          <li>Google / Firebase: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+          <li>Mixpanel: <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank">https://mixpanel.com/legal/privacy-policy/</a></li>
+        </ul>
+      </div>
+
+      <div class="section" id="s13">
+        <span class="section-num">13 — Changes to This Policy</span>
+        <h2>Changes to This Policy</h2>
+        <p>We'll update the "Last Updated" date when this policy changes and notify you in-app for material changes. Continued use means acceptance.</p>
+      </div>
+
+      <div class="section" id="s14">
+        <span class="section-num">14 — Contact</span>
+        <h2>Contact</h2>
+        <p>Privacy questions or requests: <a href="mailto:support@sealens.app">support@sealens.app</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <a class="footer-logo" href="#">
+      <div class="footer-logo-placeholder">LOGO</div>
+      <span>SeaLens</span>
+    </a>
+    <p class="footer-meta">Effective date: April 17, 2026 &nbsp;·&nbsp; No account required &nbsp;·&nbsp; Global</p>
+  </footer>
+
+</body>
+</html>
